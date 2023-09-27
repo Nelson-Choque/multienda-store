@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "./../../tailwind.css";
+import Card from "./Card.astro";
+import Category from "./Category.astro";
+import { SectionCategory } from "./SectionCategory";
+import { Categories } from "./category/Categories";
+---
+
+<main class="px-4 mt-4">
+  <div class="container">
+    <div class="sliders grid grid-cols-3 grid-rows-2 gap-4">
+      <img
+        class="w-full row-span-2 col-span-3 lg:col-span-2"
+        src="https://images.falabella.com/v3/assets/bltf4ed0b9a176c126e/blt3bd21463d8f41fb8/65087e29e019056145ecab85/mc-dk-2-3-1809-JL.jpg"
+        alt=""
+      />
+      <img
+        class="hidden lg:block w-full"
+        src="https://images.falabella.com/v3/assets/bltf4ed0b9a176c126e/blt3bd21463d8f41fb8/65087e29e019056145ecab85/mc-dk-2-3-1809-JL.jpg"
+        alt=""
+      />
+      <img
+        class="hidden lg:block w-full"
+        src="https://images.falabella.com/v3/assets/bltf4ed0b9a176c126e/blt3bd21463d8f41fb8/65087e29e019056145ecab85/mc-dk-2-3-1809-JL.jpg"
+        alt=""
+      />
+    </div>
+    <div class="mt-4">
+      <Categories client:only />
+    </div>
+    <!-- 
+    <div class="overflow-scroll">
+      <section
+        class="section-categories flex w-max gap-4 mt-4 overflow-x-scroll pb-2 mx-auto"
+      >
+        <Category
+          imgUrl="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dCUyMHNoaXJ0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+          title="polo"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/portrait-sporty-handsome-strong-man-healthy-athletic-fitness-model-posing-near-gray-wall-white-underwear_158538-17459.jpg?w=1380&t=st=1695185961~exp=1695186561~hmac=6ce4ae72b293a486e3a002c7844d9ab17ed8b864d453d4bc8b14472882413f07"
+          title="truza"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/socks-isolated_1203-7006.jpg?w=740&t=st=1695186255~exp=1695186855~hmac=ca563f2eb37158e20104ee40c8f632e329855f3ef588198bc002945a7f04b10f"
+          title="medias"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/woman-with-beautiful-body_144627-37969.jpg?size=626&ext=jpg"
+          title="brasieres"
+        />
+        <Category
+          imgUrl="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dCUyMHNoaXJ0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+          title="polo"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/portrait-sporty-handsome-strong-man-healthy-athletic-fitness-model-posing-near-gray-wall-white-underwear_158538-17459.jpg?w=1380&t=st=1695185961~exp=1695186561~hmac=6ce4ae72b293a486e3a002c7844d9ab17ed8b864d453d4bc8b14472882413f07"
+          title="truza"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/socks-isolated_1203-7006.jpg?w=740&t=st=1695186255~exp=1695186855~hmac=ca563f2eb37158e20104ee40c8f632e329855f3ef588198bc002945a7f04b10f"
+          title="medias"
+        />
+        <Category
+          imgUrl="https://img.freepik.com/free-photo/woman-with-beautiful-body_144627-37969.jpg?size=626&ext=jpg"
+          title="brasieres"
+        />
+      </section>
+    </div> -->
+
+    <div class="w-full h-1 relative bottom-2 color-neutral"></div>
+
+    <h2 class="category-title text-zinc-700 font-bold mt-4">Novedades</h2>
+    <p class="category-text">Descubre lo mas nuevo en lissy</p>
+
+    <SectionCategory client:load />
+
+    <h2 class="category-title text-zinc-700 font-bold mt-4">Ofertas</h2>
+    <p class="category-text">aprovecha antes que se acaben</p>
+
+    <SectionCategory client:load />
+
+    <h2 class="category-title text-zinc-700 font-bold mt-4">Promociones</h2>
+    <p class="category-text">Es ahora el momento de llevarte lo que buscabas</p>
+
+    <SectionCategory client:load />
+    <!-- <div class="h-96 grid grid-cols-2 mt-6 gap-4">
+      <div class="bg-slate-300"></div>
+      <div class="bg-slate-300"></div>
+    </div> -->
+  </div>
+</main>

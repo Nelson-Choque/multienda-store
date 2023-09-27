@@ -1,0 +1,57 @@
+---
+import Card from "./../../components/Card.astro";
+import Layout from "./../../layouts/Layout.astro";
+import "../../../tailwind.css";
+---
+
+<Layout title="Product">
+  <div class="container">
+    <main class="p-4">
+      <img class="w-full" src="/images/img-trusa-cachetero.png" alt="" />
+
+      <h3 class="mt-4 uppercase opacity-30">violetta</h3>
+      <div class="flex justify-between">
+        <h2 class="text-2xl font-bold">Trusa Cachetero</h2>
+        <p class="text-color-primary font-bold text-2xl">s/25</p>
+      </div>
+      <p class="mt-4">Truza de algodon reactivo en varios colores</p>
+      <p class="mt-4 text-xl capitalize font-semibold">size:</p>
+      <section class="mt-4 flex gap-4">
+        <article class="bg-white p-4 rounded-2xl">S</article>
+        <article class="bg-white p-4 rounded-2xl">M</article>
+        <article class="bg-white p-4 rounded-2xl">L</article>
+        <article class="bg-white p-4 rounded-2xl">XL</article>
+      </section>
+
+      <div class="mt-4 flex gap-4 items-center">
+        <i
+          class="bg-pink-200 text-pink-500 p-4 rounded-2xl fa-regular fa-heart icon"
+        ></i>
+        <div
+          class="bg-pink-400 font-semibold text-white w-full p-4 text-xl text-center rounded-2xl color-primary"
+        >
+          Añadir al carrito
+        </div>
+      </div>
+
+      <section class="mt-8 text-xl font-semibold">
+        <h2>Otros productos:</h2>
+        <div class="mt-4 flex gap-4">
+          <Card
+            imgUrl="https://mister-mango.omni.la/items_2/uid_commerces.1/uid_items_2.FDBZE1JCN8XA/500x500/65021CF6C8469-Pantalon-Casual-Mujer-Mave.jpg"
+            brand="violetta"
+            title="truza cachetero"
+            price={23}
+          />
+
+          <Card
+            imgUrl="https://mister-mango.omni.la/items_2/uid_commerces.1/uid_items_2.FDC25MQXU7P4/500x500/64F26A646A67E-Pantalon-De-Vestir-Mujer-Mustard.jpg"
+            brand="violetta"
+            title="truza cachetero"
+            price={23}
+          />
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>

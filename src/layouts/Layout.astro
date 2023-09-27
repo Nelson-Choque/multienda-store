@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      src="https://kit.fontawesome.com/6134260e4d.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="color-neutral">
+    <nav class="bg-white text-pink-400 p-4 sticky top-0 z-30">
+      <div class="container mx-auto">
+        <div class="menu-mobile grid grid-cols-3 items-center text-base">
+          <i class="fa-solid fa-bars-staggered icon"></i>
+          <h2 class="justify-self-center text-2xl font-bold">
+            <a href="/">Store</a>
+          </h2>
+          <i class="fa-solid fa-cart-shopping justify-self-end icon"></i>
+        </div>
+        <input
+          class="px-4 py-2 mt-4 w-full rounded-2xl text-black bg-slate-50"
+          type="text"
+          placeholder="buscar"
+        />
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>

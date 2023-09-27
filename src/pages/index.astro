@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "./../../tailwind.css";
+import Category from "../components/Category.astro";
+import Home from "../components/Home.astro";
+import Product from "../components/Product.astro";
+import ReactComponent from "../components/ReactComponent.tsx";
+import { SectionCategory } from "../components/SectionCategory";
+import { Categories } from "../components/category/Categories";
+---
+
+<Layout title="Product">
+  <Home />
+  <!-- <SectionCategory client:only /> -->
+</Layout>
+
+<!-- <Categories client:only /> -->
