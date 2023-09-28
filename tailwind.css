@@ -8,7 +8,7 @@
     }
     .container{
 
-        @apply max-w-screen-2xl mx-auto
+        @apply max-w-screen-xl mx-auto
     }
 
     .btn-primary {
@@ -78,10 +78,10 @@
     padding-bottom: 2rem !important;
   }
   
-  .category-img{
+  /* .category-img{
     min-height: 80px; 
     min-width: 80px;
-  }
+  } */
 
   .swiper-category {
     padding-bottom: 2rem !important;
@@ -89,4 +89,22 @@
   .swiper-category .swiper-slide{
     /* width: auto !important; */
     background-color: transparent;
+
+
+  }
+
+
+  .animation-fade-in{
+    animation: animationFadeIn 0.5s ease forwards;
+  }
+
+  @keyframes animationFadeIn {
+
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+        
   }

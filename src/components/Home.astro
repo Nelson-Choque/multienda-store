@@ -27,7 +27,7 @@ import { Categories } from "./category/Categories";
       />
     </div>
     <div class="mt-4">
-      <Categories client:only />
+      <Categories client:only="react" />
     </div>
     <!-- 
     <div class="overflow-scroll">
@@ -74,7 +74,7 @@ import { Categories } from "./category/Categories";
     <h2 class="category-title text-zinc-700 font-bold mt-4">Novedades</h2>
     <p class="category-text">Descubre lo mas nuevo en lissy</p>
 
-    <SectionCategory client:load />
+    <SectionCategory client:visible />
 
     <h2 class="category-title text-zinc-700 font-bold mt-4">Ofertas</h2>
     <p class="category-text">aprovecha antes que se acaben</p>
@@ -84,7 +84,7 @@ import { Categories } from "./category/Categories";
     <h2 class="category-title text-zinc-700 font-bold mt-4">Promociones</h2>
     <p class="category-text">Es ahora el momento de llevarte lo que buscabas</p>
 
-    <SectionCategory client:load />
+    <SectionCategory client:only="react" />
     <!-- <div class="h-96 grid grid-cols-2 mt-6 gap-4">
       <div class="bg-slate-300"></div>
       <div class="bg-slate-300"></div>

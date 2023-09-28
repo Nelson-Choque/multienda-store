@@ -15,6 +15,20 @@ import { Category } from "./Category";
 export function Categories() {
   return (
     <Swiper
+      breakpoints={{
+        640: {
+          slidesPerView: 6,
+          slidesPerGroup: 6,
+        },
+        1024: {
+          slidesPerView: 8,
+          slidesPerGroup: 8,
+        },
+        1280: {
+          slidesPerView: 10,
+          slidesPerGroup: 10,
+        },
+      }}
       slidesPerView={4}
       slidesPerGroup={4}
       spaceBetween={16}
